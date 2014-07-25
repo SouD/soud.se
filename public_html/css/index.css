@@ -1,0 +1,147 @@
+
+/**
+ * TODO: minimize
+ */
+
+/*
+ * Globals
+ */
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+}
+
+/*
+ * Presentation
+ */
+
+.presentation-portrait {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e3e3e3;
+  border-color: rgba(255,255,255,0);
+}
+
+/*
+ * Social
+ */
+
+.social {
+  margin-top: 10px;
+}
+
+.social-button {
+  display: block;
+  outline: none;
+  margin-top: 5px;
+  margin-right: 1px;
+  margin-bottom: 3px;
+  margin-left: 0px;
+
+  background-color: rgba(255,255,255,.25);
+  text-decoration: none;
+  color: inherit;
+
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+
+.social-button:hover {
+  box-shadow: 0 0 5px rgba(81,203,238,1);
+  margin-top: 5px;
+  margin-right: 1px;
+  margin-bottom: 3px;
+  margin-left: 0px;
+  color: inherit;
+}
+
+.social-button h4 {
+  margin-top: 20px;
+}
+
+.social-icon {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.social-icon-github {
+  background-color: #f3f3f3;
+}
+
+.social-icon-linkedin {
+  background-color: #007bb6;
+}
+
+.social-icon-twitter {
+  background-color: #00aced;
+}
+
+.social-icon-facebook {
+  background-color: #3b5998;
+}
+
+@media (min-width: 768px) {
+
+  .social-group {
+    margin-bottom: 30px;
+  }
+
+  .social-group:last-child {
+    margin-bottom: 20px;
+  }
+
+}
+
+/*
+ * Projects
+ */
+
+.projects {}
+
+.projects-header {
+  margin-bottom: 20px;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+.project-name {
+  margin-top: 0;
+}
+
+.project-link:hover {
+  text-decoration: none;
+}
+
+.project-image {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+.project-link:hover .project-image {
+  box-shadow: 0 0 5px rgba(81,203,238,1);
+}
+
+.project-description {
+  margin-top: 10px;
+}
+
+@media (min-width: 992px) {
+
+  .projects-header {
+    margin-top: 60px;
+  }
+
+  .project {
+    margin-bottom: 60px;
+  }
+
+}

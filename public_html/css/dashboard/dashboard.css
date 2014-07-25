@@ -1,0 +1,44 @@
+
+/**
+ * TODO: minimize
+ */
+
+/*
+ * Sidebar
+ */
+
+.nav-sidebar {
+  background-color: #f5f5f5;
+}
+
+.nav-sidebar > .active > a {
+  background-color: #428bca;
+  color: #fff;
+}
+.nav-sidebar > .active > a:hover {
+  color: #2a6496;
+}
+
+/*
+ * Actions
+ */
+
+.nav-actions {
+  margin-bottom: 20px;
+}
+
+/*
+ * Main
+ */
+
+.main {
+  background-color: #f5f5f5;
+}
+
+/*.main p,
+.main h1,
+.main h2,
+.main h3,
+.main h4 {
+    color: ;
+}*/
