@@ -49,7 +49,7 @@
                   <i class="fa fa-linkedin fa-4x fa-fw fa-inverse social-icon social-icon-linkedin"></i>
                 </div>
                 <div class="col-xs-8">
-                  <h4>I'm for hire!</h4>
+                  <h4>Check me out!</h4>
                 </div>
               </div>
             </a>
