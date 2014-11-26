@@ -11,7 +11,7 @@ class HomeController extends \BaseController {
 
         $data = array(
             'age' => $age,
-            'projects' => Project::orderBy('updated_at', 'desc')->paginate(Project::API_PAGINATION_NUM_ITEMS)
+            // 'projects' => Project::orderBy('updated_at', 'desc')->paginate(Project::API_PAGINATION_NUM_ITEMS)
         );
 
         return View::make('welcome.index', $data);

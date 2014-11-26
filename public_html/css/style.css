@@ -1,0 +1,19 @@
+/**
+ * SouD.se style v0.0.1 by SouD.
+ *
+ * @author SouD
+ * @version 0.0.1
+ * @since 2014-11-26
+ */
+body {
+  margin-bottom: 50px;
+  background-color: #f4f4f4;
+  background-image: url("../img/1280x720.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+  @media (min-width: 768px) {
+    body {
+      background-image: url("../img/background.png"); } }
+
+/*# sourceMappingURL=style.css.map */

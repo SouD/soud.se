@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('styles')
-  <link rel="stylesheet" href="css/auth/login.css">
+
 @stop
 
 @section('content')

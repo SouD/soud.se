@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('styles')
-  <link rel="stylesheet" href="css/projects/index.css">
+
 @stop
 
 @section('content')
@@ -58,5 +58,5 @@
 @stop
 
 @section('scripts')
-  <script src="js/holder.js"></script>
+
 @stop

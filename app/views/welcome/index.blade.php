@@ -1,8 +1,7 @@
 @extends('layouts.master')
 
 @section('styles')
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/index.css">
+
 @stop
 
 @section('content')
@@ -21,7 +20,7 @@
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
         <h1 class="text-center">Who am I?</h1>
         <p>My name is Linus Sörensen and I am a happy {{ $age }} year old coffee powered code machine from the western parts of Sweden and this is my personal evil laboratory. Beware all ye who step into here, for here there be monsters!</p>
-        <p>All jokes aside though, here you can find most things relevant to me, ranging from personal projects to musings about which metal band is the best. Check the links down below to find me on other sites. Please enjoy your stay!</p>
+        <p>All jokes aside though, here you can find most things relevant to me, ranging from personal projects to musings about which metal band is the best. Check the links down below to find me on other sites.</p>
         <p><small>P.S. Please excuse my horrible design of this page! I am as artsy as a doorknob.</small></p>
       </div>
     </div>
@@ -84,58 +83,6 @@
       </div>
     </div>
 
-    <!-- Projects -->
-    <div class="row projects">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-        <h1 class="text-center projects-header">Projects</h1>
-      </div>
-      @foreach($projects as $project)
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 project">
-          <div class="row">
-            <div class="col-xs-12 visible-xs">
-              @if($project->link !== NULL)
-                <a class="project-link" href="{{ $project->link }}">
-              @endif
-              <h1 class="project-name">{{ $project->name }}</h1>
-              @if($project->link !== NULL)
-                </a>
-              @endif
-              <p class="project-brief">{{ $project->brief }}</p>
-            </div>
-            <div class="col-xs-12 col-sm-5 col-md-5">
-              @if($project->link !== NULL)
-                <a class="project-link" href="{{ $project->link }}">
-              @endif
-              @if($project->image !== NULL)
-                <img class="img-responsive project-image" src="{{ $project->image }}">
-              @else
-                <img class="img-responsive project-image" src="holder.js/214x111/auto/textmode:exact">
-              @endif
-              @if($project->link !== NULL)
-                </a>
-              @endif
-            </div>
-            <div class="col-xs-12 col-sm-7 col-md-7 hidden-xs">
-              @if($project->link !== NULL)
-                <a class="project-link" href="{{ $project->link }}">
-              @endif
-              <h1 class="project-name">{{ $project->name }}</h1>
-              @if($project->link !== NULL)
-                </a>
-              @endif
-              <p class="project-brief">{{ $project->brief }}</p>
-            </div>
-            <div class="col-xs-12">
-              <p class="project-description">{{ $project->description }}</p>
-            </div>
-          </div>
-        </div>
-      @endforeach
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center hidden">
-        {{ $projects->links() }}
-      </div>
-    </div>
-
   </div>
 @stop
 
@@ -153,7 +100,5 @@
 @stop
 
 @section('scripts')
-  <script src="js/infinitescroll.min.js"></script>
-  <script src="js/holder.js"></script>
-  <script src="js/index.js"></script>
+
 @stop

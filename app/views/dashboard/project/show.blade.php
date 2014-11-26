@@ -32,5 +32,5 @@
 @stop
 
 @section('scripts')
-  <script src="{{ asset('js/holder.js') }}"></script>
+
 @stop

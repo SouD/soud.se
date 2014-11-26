@@ -52,5 +52,8 @@ composer.lock
 /app/config/app.php
 /app/config/database.php
 
+# Sass
+.sass-cache/
+
 # SouD.se
 app/database/seeds/UserTableSeeder.php
