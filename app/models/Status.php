@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-class Project extends Eloquent {
+class Status extends Eloquent {
 
     use SoftDeletingTrait;
 
@@ -11,7 +11,7 @@ class Project extends Eloquent {
      *
      * @var string
      */
-    protected $table = 'projects';
+    protected $table = 'statuses';
 
     protected $dates = array('deleted_at');
 }

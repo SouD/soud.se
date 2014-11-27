@@ -16,87 +16,10 @@ $since: "2014-11-26";
  */
 
 // -----------------------------------------------------------------------------
-// - Variables                                                                 -
+// - Import partials                                                           -
 // -----------------------------------------------------------------------------
 
-// Breakpoints
-// $xs: < 768px
-$sm: 768px;
-$md: 992px;
-$lg: 1200px;
-$mw: min-width; // Used in media queries
-
-// Body
-$body-background-xs: url('../img/1280x720.png');
-$body-background: url('../img/background.png');
-
-// Footer
-$footer-height: 50px;
-
-// -----------------------------------------------------------------------------
-// - Mixins                                                                    -
-// -----------------------------------------------------------------------------
-
-@mixin border($facing: false, $width: 1px, $style: solid, $color: #ddd) {
-  @if $facing != false {
-    border-#{$facing}-width: $width;
-    border-#{$facing}-style: $style;
-    border-#{$facing}-color: $color;
-  } @else {
-    border-width: $width;
-    border-style: $style;
-    border-color: $color;
-  }
-}
-
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
-}
-
-@mixin box-shadow($shadows...) {
-  -webkit-box-shadow: $shadows;
-     -moz-box-shadow: $shadows;
-          box-shadow: $shadows;
-}
-
-@mixin margin($top: false, $right: false, $bottom: false, $left: false) {
-  @if $top != false {
-    margin-top: $top;
-  }
-  @if $right != false {
-    margin-right: $right;
-  }
-  @if $bottom != false {
-    margin-bottom: $bottom;
-  }
-  @if $left != false {
-    margin-left: $left;
-  }
-}
-
-@mixin padding($top: false, $right: false, $bottom: false, $left: false) {
-  @if $top != false {
-    padding-top: $top;
-  }
-  @if $right != false {
-    padding-right: $right;
-  }
-  @if $bottom != false {
-    padding-bottom: $bottom;
-  }
-  @if $left != false {
-    padding-left: $left;
-  }
-}
-
-@mixin transition($transitions...) {
-  -webkit-transition: $transitions;
-       -o-transition: $transitions;
-          transition: $transitions;
-}
+@import 'variables', 'colors';
 
 // -----------------------------------------------------------------------------
 // - Globals                                                                   -
@@ -105,13 +28,11 @@ $footer-height: 50px;
 body {
   margin-bottom: $footer-height;
 
-  background-color: #f4f4f4;
-  background-image: $body-background-xs;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-
-  @media ($mw: $sm) {
-    background-image: $body-background;
-  }
+  background-color: $background-color;
 }
+
+// -----------------------------------------------------------------------------
+// - Auth                                                                      -
+// -----------------------------------------------------------------------------
+
+@import 'auth';

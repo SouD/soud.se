@@ -1,9 +1,5 @@
 @extends('layouts.master')
 
-@section('styles')
-
-@stop
-
 @section('content')
   <div class="container">
 
@@ -97,8 +93,4 @@
       </div>
     </div>
   </div>
-@stop
-
-@section('scripts')
-
 @stop

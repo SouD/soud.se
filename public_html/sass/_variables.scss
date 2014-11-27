@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// - Variables                                                                 -
+// -----------------------------------------------------------------------------
+
+// Breakpoints
+// $xs: < 768px
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+$mw: min-width; // Used in media queries
+
+// Body
+$body-background-xs: url('../img/1280x720.png');
+$body-background: url('../img/background.png');
+
+// Footer
+$footer-height: 50px;

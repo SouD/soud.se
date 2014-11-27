@@ -10,8 +10,7 @@ class HomeController extends \BaseController {
         $age = $interval->format('%y');
 
         $data = array(
-            'age' => $age,
-            // 'projects' => Project::orderBy('updated_at', 'desc')->paginate(Project::API_PAGINATION_NUM_ITEMS)
+            'age' => $age
         );
 
         return View::make('welcome.index', $data);
