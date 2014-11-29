@@ -42,8 +42,8 @@ Route::group(array('domain' => 'api.localhost.soud'), function()
  * Global routes
  */
 
-// Front page
-Route::get('/', 'HomeController@showWelcome');
+// Front page / Base URL
+Route::get('/', array('as' => 'base', 'uses' => 'HomeController@showWelcome'));
 
 // Auth
 Route::get('login', 'AuthController@getLogin');

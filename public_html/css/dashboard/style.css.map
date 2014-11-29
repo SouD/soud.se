@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAWE,IAAK;EACH,WAAW,ECAC,IAAI",
+"sources": ["../../sass/dashboard/navbar.scss","../../sass/_variables.scss"],
+"names": [],
+"file": "style.css"
+}
