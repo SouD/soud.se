@@ -8,8 +8,15 @@
 // - Navbar                                                                    -
 // -----------------------------------------------------------------------------
 
+// To avoid weird positioning we only apply
+// these styles if navbar is shown.
 @if($display-navbar) {
   body {
     padding-top: $navbar-height;
   }
+}
+
+// Remove fixed top border
+.navbar-fixed-top {
+  border: 0;
 }
