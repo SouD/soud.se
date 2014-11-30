@@ -18,7 +18,7 @@ class ProjectController extends \BaseController {
     public function index()
     {
         $data = array(
-            'projects' => Project::withTrashed()->paginate(Project::PAGINATION_NUM_ITEMS)
+            'projects' => Project::withTrashed()->paginate()
         );
 
         return View::make('dashboard.project.index', $data);

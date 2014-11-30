@@ -10,14 +10,17 @@
       <a class="navbar-brand" href="{{ route('base') }}">SouD</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-        <li><a href="#settings">Settings</a></li>
-        <li><a href="#profile">Profile</a></li>
+      <ul class="nav navbar-nav navbar-right">
+        <li @if(Request::is('dashboard*')) class="active" @endif>
+          <a href="{{ route('dashboard') }}">Dashboard</a>
+        </li>
+        <li @if(Route::currentRouteName() == 'settings') class="active" @endif>
+          <a href="#settings">Settings</a>
+        </li>
+        <li @if(Route::currentRouteName() == 'profile') class="active" @endif>
+          <a href="#profile">{{{ Auth::user()->email }}}</a>
+        </li>
       </ul>
-      <form class="navbar-form navbar-right">
-        <input type="text" class="form-control" placeholder="Search...">
-      </form>
     </div>
   </div>
 </nav>

@@ -2,7 +2,7 @@
 // - Import partials                                                           -
 // -----------------------------------------------------------------------------
 
-@import '../variables', '../mixins';
+@import '../variables', '../mixins', '../colors';
 
 // -----------------------------------------------------------------------------
 // - Sidebar                                                                    -
@@ -23,25 +23,22 @@
     overflow-x: hidden;
     overflow-y: auto;
 
-    background-color: #f5f5f5;
-    border-right: 1px solid #eee;
+    background-color: $sidebar-background-color;
+    @include border(right, 1px, solid, $sidebar-border-color);
   }
 }
 
 .nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
-  margin-bottom: 20px;
-  margin-left: -20px;
+  @include margin(false, -21px, 20px, -20px);
 
   & > li > a {
-    padding-right: 20px;
-    padding-left: 20px;
+    @include padding(false, 20px, false, 20px);
   }
 
   & > .active > a,
   & > .active > a:hover,
   & > .active > a:focus {
-    color: #fff;
-    background-color: #428bca;
+    color: $sidebar-link-focus-color;
+    background-color: $sidebar-link-focus-background-color;
   }
 }
