@@ -1,12 +1,5 @@
 @extends('layouts.dashboard')
 
-@section('sidebar')
-  <ul class="nav nav-sidebar">
-    <li><a href="{{ route('dashboard') }}">Overview</a></li>
-    <li class="active"><a href="{{ action('Dashboard\ProjectController@index') }}">Projects</a></li>
-  </ul>
-@stop
-
 @section('main')
   <h1 class="page-header">Projects <small>Create new project</small></h1>
   <ul class="nav nav-pills nav-actions">

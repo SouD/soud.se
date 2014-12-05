@@ -13,15 +13,15 @@ class CreateProjectsTable extends Migration {
 	public function up()
 	{
 		Schema::create('projects', function($table)
-        {
-            $table->increments('id');
-            $table->string('name')->unique();
-            $table->string('link')->nullable();
-            $table->string('image')->nullable();
-            $table->text('description')->nullable();
-            $table->timestamps();
-            $table->softDeletes();
-        });
+		{
+			$table->increments('id');
+			$table->string('name')->unique();
+			$table->string('link')->nullable();
+			$table->string('image')->nullable();
+			$table->text('description')->nullable();
+			$table->timestamps();
+			$table->softDeletes();
+		});
 	}
 
 	/**
