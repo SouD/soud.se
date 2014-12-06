@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	'host' => 'smtp.soud.se',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,10 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	'from' => array(
+		'address' => 'info@soud.se',
+		'name'    => 'SouD',
+	),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +83,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => 'info@soud.se',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -119,6 +122,6 @@ return array(
 	|
 	*/
 
-	'pretend' => false,
+	'pretend' => true,
 
 );

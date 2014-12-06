@@ -1,6 +1,6 @@
 <?php
 
-class DashboardController extends \BaseController {
+class DashboardController extends BaseController {
 
 	public function getDashboard()
 	{
