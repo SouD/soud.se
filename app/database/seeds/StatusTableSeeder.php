@@ -25,7 +25,7 @@ class StatusTableSeeder extends Seeder {
 			array(
 				'name'         => 'on_hold',
 				'class'        => 'warning',
-				'display_name' => 'On Hold',
+				'display_name' => 'On hold',
 			),
 			array(
 				'name'         => 'cancelled',

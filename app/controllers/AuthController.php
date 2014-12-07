@@ -6,7 +6,7 @@ class AuthController extends BaseController {
     {
         if (Auth::check())
         {
-            return Redirect::to('dashboard');
+            return Redirect::route('dashboard');
         }
 
         return View::make('auth.login');
@@ -16,7 +16,7 @@ class AuthController extends BaseController {
     {
         if (Auth::check())
         {
-            return Redirect::to('dashboard');
+            return Redirect::route('dashboard');
         }
 
         $credentials = array(
@@ -30,7 +30,7 @@ class AuthController extends BaseController {
             return Redirect::intended('dashboard');
         }
 
-        return Redirect::to('login');
+        return Redirect::route('login');
     }
 
     public function getLogout()
@@ -39,7 +39,7 @@ class AuthController extends BaseController {
 
         // Maybe there should be a "You're now logged out." view?
 
-        return Redirect::action('HomeController@showWelcome');
+        return Redirect::route('base');
     }
 
 }

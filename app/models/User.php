@@ -22,7 +22,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-	protected $guarded = array('id');
+	protected $guarded = array(
+		'id',
+		'email',
+	);
 
 	/**
 	 * The properties excluded from the model's JSON form.

@@ -2,7 +2,7 @@
 
 class HomeController extends BaseController {
 
-    public function showWelcome()
+    public function index()
     {
         $birthdate = new DateTime('1990-10-04');
         $today = new DateTime();
