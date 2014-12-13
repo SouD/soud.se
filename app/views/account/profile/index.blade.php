@@ -86,7 +86,31 @@
         <div class="panel panel-default">
           <div class="panel-heading">Security</div>
           <div class="panel-body">
-            <p>Nothing here yet!</p>
+            {{ Form::model($user, array('route' => 'account.profile.update', 'class' => 'form-horizontal', 'role' => 'form')) }}
+              <div class="form-group @if($errors->first('current_password')) has-error @endif">
+                {{ Form::label('current_password', 'Current password', array('class' => 'col-sm-4 control-label')) }}
+                <div class="col-sm-8">
+                  {{ Form::password('current_password', array('class' => 'form-control', 'placeholder' => 'Current password', 'required')) }}
+                </div>
+              </div>
+              <div class="form-group @if($errors->first('new_password')) has-error @endif">
+                {{ Form::label('new_password', 'New password', array('class' => 'col-sm-4 control-label')) }}
+                <div class="col-sm-8">
+                  {{ Form::password('new_password', array('class' => 'form-control', 'placeholder' => 'New password', 'required')) }}
+                </div>
+              </div>
+              <div class="form-group @if($errors->first('new_password_confirmation')) has-error @endif">
+                {{ Form::label('new_password_confirmation', 'Confirm password', array('class' => 'col-sm-4 control-label')) }}
+                <div class="col-sm-8">
+                  {{ Form::password('new_password_confirmation', array('class' => 'form-control', 'placeholder' => 'Confirm password', 'required')) }}
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-8 col-sm-offset-4">
+                  <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+              </div>
+            {{ Form::close() }}
           </div>
         </div>
       </div>

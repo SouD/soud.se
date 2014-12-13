@@ -79,3 +79,8 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+Validator::extend('passcheck', function ($attribute, $value, $parameters)
+{
+    return Hash::check($value, Auth::user()->getAuthPassword());
+});

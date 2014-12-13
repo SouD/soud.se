@@ -17,7 +17,7 @@ class ProfileController extends BaseController {
 
 	public function update()
 	{
-		if (Input::has('password'))
+		if (Input::has('current_password'))
 		{
 			return $this->updateSecurity();
 		}
@@ -64,7 +64,30 @@ class ProfileController extends BaseController {
 
 	protected function updateSecurity()
 	{
+		$rules = array(
+			'current_password' => 'required|passcheck',
+			'new_password'     => 'required|min:8|confirmed'
+		);
+		$messages = array(
+			'passcheck' => 'Your old password was incorrect.',
+		);
+		$validator = Validator::make(Input::all(), $rules, $messages);
 
+		if ($validator->fails())
+		{
+			return Redirect::route('account.profile')
+				->withErrors($validator);
+		}
+		else
+		{
+			$user = Auth::user();
+			$user->password = Hash::make(Input::get('new_password'));
+			$user->save();
+
+			Session::flash('message', $user->email . '\'s password was changed!');
+
+			return Redirect::route('account.profile');
+		}
 	}
 
 }
